@@ -87,6 +87,13 @@ The Airbnb Clone Project leverages a modern stack of tools and frameworks. Each 
 ---
 
 
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![CI/CD](https://img.shields.io/badge/CI%2FCD-FF5733?style=for-the-badge&logo=git&logoColor=white)
+![API Security](https://img.shields.io/badge/API%20Security-32CD32?style=for-the-badge&logo=lock&logoColor=white)
 
 
 
