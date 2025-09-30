@@ -283,3 +283,36 @@ All interactions with the platform’s backend are protected using modern securi
 ### **7. CI/CD Pipeline Integration**
 The project integrates CI/CD practices using tools like GitHub Actions and Docker. This feature automates testing, building, and deployment, ensuring the platform remains stable, scalable, and production-ready.
 
+
+## 🔒 API Security
+
+Securing the backend APIs of the Airbnb Clone Project is essential to protect user data, maintain trust, and ensure safe transactions. The following key security measures will be implemented:
+
+### **1. Authentication**
+Only registered users will be able to access the system through secure login mechanisms (e.g., JWT tokens or session-based authentication).  
+**Why it matters:** Prevents unauthorized access to sensitive data such as user information, bookings, and payment details.
+
+### **2. Authorization**
+Role-based access control will ensure that users can only perform actions allowed for their role (e.g., guests cannot edit properties, only hosts can manage listings).  
+**Why it matters:** Protects the integrity of the system by ensuring users only access resources they are permitted to.
+
+### **3. Data Encryption**
+All communication between client and server will use HTTPS (TLS/SSL). Sensitive fields like passwords will be hashed and never stored in plain text.  
+**Why it matters:** Protects against data breaches and ensures sensitive data such as login credentials and payment details remain secure.
+
+### **4. Rate Limiting**
+APIs will include request rate limiting to prevent abuse such as brute-force login attempts or denial-of-service (DoS) attacks.  
+**Why it matters:** Ensures the platform remains available and responsive even under malicious traffic.
+
+### **5. Input Validation & Sanitization**
+All incoming data will be validated and sanitized to prevent injection attacks (e.g., SQL injection, XSS).  
+**Why it matters:** Protects the system from malicious input that could compromise the database or application behavior.
+
+### **6. Secure Payments Handling**
+Payment APIs will follow industry standards (e.g., PCI DSS compliance) and sensitive financial data will not be stored directly on the platform.  
+**Why it matters:** Ensures safe financial transactions and builds user trust in the platform.
+
+---
+
+By implementing these measures, the Airbnb Clone Project ensures a secure, scalable, and reliable system that protects both hosts and guests while maintaining smooth operations.
+
