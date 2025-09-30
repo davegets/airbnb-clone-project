@@ -252,3 +252,34 @@ Booking ↔ Payments: Each booking has exactly one payment.
 git add README.md
 git commit -m "Add Database Design section with entities and relationships"
 git push origin main
+
+
+
+
+
+
+## ✨ Feature Breakdown
+
+The Airbnb Clone Project includes the following core features, each designed to replicate real-world booking platform functionality:
+
+### **1. User Management**
+This feature allows users to register, log in, and manage their profiles. It supports different roles such as guests and hosts, ensuring secure authentication and role-based access throughout the platform.
+
+### **2. Property Management**
+Hosts can create, update, and manage property listings with details such as title, description, location, and price per night. This feature ensures a smooth hosting experience by allowing properties to be discoverable by guests.
+
+### **3. Booking System**
+Guests can search for available properties and make reservations by selecting check-in and check-out dates. The booking system prevents conflicts by ensuring properties cannot be double-booked.
+
+### **4. Reviews and Ratings**
+Guests can leave feedback on properties they have stayed at, providing a rating and comments. This feature helps maintain trust and transparency within the platform, improving decision-making for future guests.
+
+### **5. Payments**
+Secure online payments are processed for each booking. This feature ensures transactions between guests and hosts are recorded, with statuses such as pending, completed, or failed.
+
+### **6. API Security**
+All interactions with the platform’s backend are protected using modern security measures like authentication tokens and encrypted data transfer. This safeguards sensitive information such as user credentials and payment details.
+
+### **7. CI/CD Pipeline Integration**
+The project integrates CI/CD practices using tools like GitHub Actions and Docker. This feature automates testing, building, and deployment, ensuring the platform remains stable, scalable, and production-ready.
+
