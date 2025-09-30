@@ -105,147 +105,124 @@ The Airbnb Clone Project leverages a modern stack of tools and frameworks. Each 
 
 
 
-📊 Database Design
+## 📊 Database Design
 
 The database for the Airbnb Clone Project is designed as a relational schema with the following key entities:
 
-1. Users
+---
 
+### ![Users](https://img.shields.io/badge/Users-1E90FF?style=for-the-badge&logo=user&logoColor=white)
 Represents people who use the platform as either hosts or guests.
 
-Fields:
+**Fields:**
+- `id` (Primary Key)
+- `name`
+- `email` (unique)
+- `password_hash`
+- `role` (e.g., host, guest, admin)
 
-id (Primary Key)
+**Relationships:**
+- A user can **list multiple properties**.
+- A user can **make multiple bookings**.
+- A user can **write multiple reviews**.
+- A user is associated with **payments** they make or receive.
 
-name
+---
 
-email (unique)
-
-password_hash
-
-role (e.g., host, guest, admin)
-
-Relationships:
-
-A user can list multiple properties.
-
-A user can make multiple bookings.
-
-A user can write multiple reviews.
-
-A user is associated with payments they make or receive.
-
-2. Properties
-
+### ![Properties](https://img.shields.io/badge/Properties-32CD32?style=for-the-badge&logo=home&logoColor=white)
 Represents the listings created by hosts.
 
-Fields:
+**Fields:**
+- `id` (Primary Key)
+- `user_id` (Foreign Key → Users)
+- `title`
+- `description`
+- `price_per_night`
 
-id (Primary Key)
+**Relationships:**
+- A property **belongs to a host (user)**.
+- A property can have **many bookings**.
+- A property can have **many reviews**.
 
-user_id (Foreign Key → Users)
+---
 
-title
-
-description
-
-price_per_night
-
-Relationships:
-
-A property belongs to a host (user).
-
-A property can have many bookings.
-
-A property can have many reviews.
-
-3. Bookings
-
+### ![Bookings](https://img.shields.io/badge/Bookings-FF5733?style=for-the-badge&logo=calendar&logoColor=white)
 Represents reservations made by guests.
 
-Fields:
+**Fields:**
+- `id` (Primary Key)
+- `user_id` (Foreign Key → Users)
+- `property_id` (Foreign Key → Properties)
+- `check_in_date`
+- `check_out_date`
 
-id (Primary Key)
+**Relationships:**
+- A booking **belongs to a guest (user)**.
+- A booking **belongs to a property**.
+- A booking is linked to a **payment**.
 
-user_id (Foreign Key → Users)
+---
 
-property_id (Foreign Key → Properties)
-
-check_in_date
-
-check_out_date
-
-Relationships:
-
-A booking belongs to a guest (user).
-
-A booking belongs to a property.
-
-A booking is linked to a payment.
-
-4. Reviews
-
+### ![Reviews](https://img.shields.io/badge/Reviews-FFD700?style=for-the-badge&logo=star&logoColor=black)
 Represents feedback from guests about a property.
 
-Fields:
+**Fields:**
+- `id` (Primary Key)
+- `user_id` (Foreign Key → Users)
+- `property_id` (Foreign Key → Properties)
+- `rating` (1–5)
+- `comment`
 
-id (Primary Key)
+**Relationships:**
+- A review **belongs to a guest (user)**.
+- A review **belongs to a property**.
 
-user_id (Foreign Key → Users)
+---
 
-property_id (Foreign Key → Properties)
-
-rating (1–5)
-
-comment
-
-Relationships:
-
-A review belongs to a guest (user).
-
-A review belongs to a property.
-
-5. Payments
-
+### ![Payments](https://img.shields.io/badge/Payments-32CD32?style=for-the-badge&logo=paypal&logoColor=white)
 Represents financial transactions related to bookings.
 
-Fields:
+**Fields:**
+- `id` (Primary Key)
+- `booking_id` (Foreign Key → Bookings)
+- `amount`
+- `payment_status` (e.g., pending, completed, failed)
+- `payment_date`
 
-id (Primary Key)
+**Relationships:**
+- A payment **belongs to a booking**.
+- Payments are tied to both the **guest (payer)** and the **host (receiver)** indirectly through the booking.
 
-booking_id (Foreign Key → Bookings)
+---
 
-amount
+### 🔗 Entity Relationships Summary
+- **User ↔ Properties:** One user (host) can list many properties.  
+- **User ↔ Bookings:** One user (guest) can make many bookings.  
+- **Property ↔ Bookings:** One property can have many bookings.  
+- **Property ↔ Reviews:** One property can have many reviews.  
+- **User ↔ Reviews:** One user (guest) can leave many reviews.  
+- **Booking ↔ Payments:** Each booking has exactly one payment.
 
-payment_status (e.g., pending, completed, failed)
+---
 
-payment_date
+### ✅ ![Next Step](https://img.shields.io/badge/Next%20Step-6A5ACD?style=for-the-badge)
+Commit this update with the following commands:
 
-Relationships:
-
-A payment belongs to a booking.
-
-Payments are tied to both the guest (payer) and the host (receiver) indirectly through the booking.
-
-🔗 Entity Relationships Summary
-
-User ↔ Properties: One user (host) can list many properties.
-
-User ↔ Bookings: One user (guest) can make many bookings.
-
-Property ↔ Bookings: One property can have many bookings.
-
-Property ↔ Reviews: One property can have many reviews.
-
-User ↔ Reviews: One user (guest) can leave many reviews.
-
-Booking ↔ Payments: Each booking has exactly one payment.
-
-✅ Next Step: Commit this update with a message like:
 
 git add README.md
 git commit -m "Add Database Design section with entities and relationships"
 git push origin main
+
+
+---
+
+### ✅ Features of This Version:
+1. **Entities** like `Users`, `Properties`, `Bookings` are colorful badges.  
+2. **Next Step** is highlighted in purple.  
+3. Fields and relationships remain readable under each badge.  
+4. Works perfectly in **GitHub README**.
+
+---
 
 
 
