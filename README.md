@@ -24,81 +24,68 @@ Team Roles
 
 
 
-Technology Stack
+## 🎨 Technology Stack
 
-1. Django
+The Airbnb Clone Project leverages a modern stack of tools and frameworks. Each technology plays a unique role in delivering a secure, scalable, and collaborative application.
 
-Purpose: A high-level Python web framework used for rapid development and clean, pragmatic design.
+---
 
-In this project: It serves as the backend framework for building APIs, managing authentication, handling business logic, and integrating with the database.
+<div style="background-color:#f4e04d; padding:15px; border-radius:10px; margin-bottom:10px;">
+<h3>⚡ Django</h3>
+<b>Purpose:</b> A high-level Python web framework used for rapid development and clean, pragmatic design.  
+<b>In this project:</b> Acts as the <i>backend framework</i>, powering APIs, authentication, business logic, and database integration.
+</div>
 
-2. MySQL
+<div style="background-color:#87CEEB; padding:15px; border-radius:10px; margin-bottom:10px;">
+<h3>🗄️ MySQL</h3>
+<b>Purpose:</b> A widely used relational database management system (RDBMS).  
+<b>In this project:</b> Serves as the <i>primary database</i> for storing structured data such as users, properties, bookings, and payments.
+</div>
 
-Purpose: A widely used relational database management system (RDBMS).
+<div style="background-color:#dda0dd; padding:15px; border-radius:10px; margin-bottom:10px;">
+<h3>🔍 GraphQL</h3>
+<b>Purpose:</b> A query language and runtime for APIs, offering flexibility over REST.  
+<b>In this project:</b> Enables the frontend to <i>fetch exactly the data it needs</i>, improving performance and developer productivity.
+</div>
 
-In this project: It is the primary database for storing structured data such as users, properties, bookings, and payments.
+<div style="background-color:#ffb347; padding:15px; border-radius:10px; margin-bottom:10px;">
+<h3>🐙 GitHub</h3>
+<b>Purpose:</b> A platform for version control and collaboration, built on Git.  
+<b>In this project:</b> Used to <i>host repositories, manage code versions, and enable team collaboration</i>.
+</div>
 
-3. GraphQL
+<div style="background-color:#90ee90; padding:15px; border-radius:10px; margin-bottom:10px;">
+<h3>📝 Markdown</h3>
+<b>Purpose:</b> A lightweight markup language for formatting documents.  
+<b>In this project:</b> Used for <i>README.md, documentation, team roles, and database design notes</i>.
+</div>
 
-Purpose: A query language and runtime for APIs, providing a more flexible and efficient alternative to REST.
+<div style="background-color:#00ced1; padding:15px; border-radius:10px; margin-bottom:10px;">
+<h3>🐳 Docker</h3>
+<b>Purpose:</b> A containerization platform that packages applications and dependencies.  
+<b>In this project:</b> Ensures the app <i>runs consistently across environments</i> and simplifies deployment.
+</div>
 
-In this project: It allows the frontend to fetch exactly the data it needs from the backend, improving performance and developer productivity.
+<div style="background-color:#ffa07a; padding:15px; border-radius:10px; margin-bottom:10px;">
+<h3>⚙️ GitHub Actions</h3>
+<b>Purpose:</b> A CI/CD tool built into GitHub for automation.  
+<b>In this project:</b> Automates <i>testing, linting, and deployment pipelines</i>, reducing manual effort.
+</div>
 
-4. GitHub
+<div style="background-color:#ff6347; padding:15px; border-radius:10px; margin-bottom:10px;">
+<h3>🚀 CI/CD</h3>
+<b>Purpose:</b> Practices for automating integration, testing, and deployment.  
+<b>In this project:</b> Ensures <i>pipeline automation</i>, reduces errors, and speeds up release cycles.
+</div>
 
-Purpose: A platform for version control and collaboration, built on Git.
+<div style="background-color:#32cd32; padding:15px; border-radius:10px; margin-bottom:10px;">
+<h3>🔒 API Security</h3>
+<b>Purpose:</b> Tools and practices for protecting APIs (authentication, authorization, encryption, etc.).  
+<b>In this project:</b> Safeguards <i>sensitive user data</i> and ensures <i>secure transactions</i> between clients and the server.
+</div>
 
-In this project: Used to host repositories, manage code versions, enable collaboration, and support team workflows.
+---
 
-5. Markdown
-
-Purpose: A lightweight markup language for formatting plain text documents.
-
-In this project: Used for creating structured documentation like the README.md, team roles, and database schemas.
-
-6. Docker
-
-Purpose: A containerization platform that packages applications and dependencies into portable, isolated environments.
-
-In this project: Ensures the application runs consistently across different environments and simplifies deployment.
-
-7. GitHub Actions
-
-Purpose: A CI/CD (Continuous Integration/Continuous Deployment) tool integrated into GitHub.
-
-In this project: Automates tasks such as running tests, linting code, and deploying the app, making development and deployment more efficient.
-
-8. CI/CD (Continuous Integration / Continuous Deployment)
-
-Purpose: A set of practices for automating integration, testing, and deployment of applications.
-
-In this project: Ensures smooth pipeline automation, reducing manual errors and speeding up releases.
-
-9. API Security Measures
-
-Purpose: Tools and practices for protecting APIs (authentication, authorization, encryption, etc.).
-
-In this project: Safeguards sensitive user data and secures transactions between clients and the server.
-
-✅ Summary of Technologies Mentioned:
-
-Django
-
-MySQL
-
-GraphQL
-
-GitHub
-
-Markdown
-
-Docker
-
-GitHub Actions
-
-CI/CD
-
-API Security
 
 
 
