@@ -99,3 +99,153 @@ GitHub Actions
 CI/CD
 
 API Security
+
+
+
+
+
+
+
+
+
+📊 Database Design
+
+The database for the Airbnb Clone Project is designed as a relational schema with the following key entities:
+
+1. Users
+
+Represents people who use the platform as either hosts or guests.
+
+Fields:
+
+id (Primary Key)
+
+name
+
+email (unique)
+
+password_hash
+
+role (e.g., host, guest, admin)
+
+Relationships:
+
+A user can list multiple properties.
+
+A user can make multiple bookings.
+
+A user can write multiple reviews.
+
+A user is associated with payments they make or receive.
+
+2. Properties
+
+Represents the listings created by hosts.
+
+Fields:
+
+id (Primary Key)
+
+user_id (Foreign Key → Users)
+
+title
+
+description
+
+price_per_night
+
+Relationships:
+
+A property belongs to a host (user).
+
+A property can have many bookings.
+
+A property can have many reviews.
+
+3. Bookings
+
+Represents reservations made by guests.
+
+Fields:
+
+id (Primary Key)
+
+user_id (Foreign Key → Users)
+
+property_id (Foreign Key → Properties)
+
+check_in_date
+
+check_out_date
+
+Relationships:
+
+A booking belongs to a guest (user).
+
+A booking belongs to a property.
+
+A booking is linked to a payment.
+
+4. Reviews
+
+Represents feedback from guests about a property.
+
+Fields:
+
+id (Primary Key)
+
+user_id (Foreign Key → Users)
+
+property_id (Foreign Key → Properties)
+
+rating (1–5)
+
+comment
+
+Relationships:
+
+A review belongs to a guest (user).
+
+A review belongs to a property.
+
+5. Payments
+
+Represents financial transactions related to bookings.
+
+Fields:
+
+id (Primary Key)
+
+booking_id (Foreign Key → Bookings)
+
+amount
+
+payment_status (e.g., pending, completed, failed)
+
+payment_date
+
+Relationships:
+
+A payment belongs to a booking.
+
+Payments are tied to both the guest (payer) and the host (receiver) indirectly through the booking.
+
+🔗 Entity Relationships Summary
+
+User ↔ Properties: One user (host) can list many properties.
+
+User ↔ Bookings: One user (guest) can make many bookings.
+
+Property ↔ Bookings: One property can have many bookings.
+
+Property ↔ Reviews: One property can have many reviews.
+
+User ↔ Reviews: One user (guest) can leave many reviews.
+
+Booking ↔ Payments: Each booking has exactly one payment.
+
+✅ Next Step: Commit this update with a message like:
+
+git add README.md
+git commit -m "Add Database Design section with entities and relationships"
+git push origin main
