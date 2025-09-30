@@ -108,6 +108,9 @@ API Security
 
 
 
+
+
+
 📊 Database Design
 
 The database for the Airbnb Clone Project is designed as a relational schema with the following key entities:
